@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>搭建博客 | Likeyao的博客</title><meta name="author" content="Likeyao"><meta name="copyright" content="Likeyao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="搭建博客一、安装hexo 前提是已经安装配置好了git和Node.js  在终端输入以下命令行 1npm install hexo -g  我遇到的错误 123456789101112131415161718192021222324252627npm error code EPERMnpm error syscall mkdirnpm error path D:\VUE\node_modules\">
+<meta property="og:type" content="website">
+<meta property="og:title" content="搭建博客">
+<meta property="og:url" content="https://keyaoli1212.github.io/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html">
+<meta property="og:site_name" content="Likeyao的博客">
+<meta property="og:description" content="搭建博客一、安装hexo 前提是已经安装配置好了git和Node.js  在终端输入以下命令行 1npm install hexo -g  我遇到的错误 123456789101112131415161718192021222324252627npm error code EPERMnpm error syscall mkdirnpm error path D:\VUE\node_modules\">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://keyaoli1212.github.io/img/butterfly-icon.png">
+<meta property="article:published_time" content="2025-06-23T14:30:19.937Z">
+<meta property="article:modified_time" content="2025-06-23T14:30:19.937Z">
+<meta property="article:author" content="Likeyao">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://keyaoli1212.github.io/img/butterfly-icon.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://keyaoli1212.github.io/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '搭建博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Likeyao的博客</span></a></span><div id="menus"></div></nav><div id="page-site-info"><h1 id="site-title">搭建博客</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><h2 id="一、安装hexo"><a href="#一、安装hexo" class="headerlink" title="一、安装hexo"></a>一、安装hexo</h2><blockquote>
+<p>前提是已经安装配置好了git和Node.js</p>
+</blockquote>
+<p>在终端输入以下命令行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
+
+<p>我遇到的错误</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">npm error code EPERM</span><br><span class="line">npm error syscall mkdir</span><br><span class="line">npm error path D:\VUE\node_modules\hexo</span><br><span class="line">npm error errno -4048</span><br><span class="line">npm error Error: EPERM: operation not permitted, mkdir &#x27;D:\VUE\node_modules\hexo&#x27;</span><br><span class="line">npm error     at async mkdir (node:internal/fs/promises:857:10)</span><br><span class="line">npm error     at async D:\VUE\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:624:20</span><br><span class="line">npm error     at async Promise.allSettled (index 0)</span><br><span class="line">npm error     at async [reifyPackages] (D:\VUE\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:325:11)</span><br><span class="line">npm error     at async Arborist.reify (D:\VUE\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:142:5)</span><br><span class="line">npm error     at async Install.exec (D:\VUE\node_modules\npm\lib\commands\install.js:150:5)</span><br><span class="line">npm error     at async Npm.exec (D:\VUE\node_modules\npm\lib\npm.js:207:9)</span><br><span class="line">npm error     at async module.exports (D:\VUE\node_modules\npm\lib\cli\entry.js:74:5) &#123;</span><br><span class="line">npm error   errno: -4048,</span><br><span class="line">npm error   code: &#x27;EPERM&#x27;,</span><br><span class="line">npm error   syscall: &#x27;mkdir&#x27;,</span><br><span class="line">npm error   path: &#x27;D:\\VUE\\node_modules\\hexo&#x27;</span><br><span class="line">npm error &#125;</span><br><span class="line">npm error</span><br><span class="line">npm error The operation was rejected by your operating system.</span><br><span class="line">npm error It&#x27;s possible that the file was already in use (by a text editor or antivirus),</span><br><span class="line">npm error or that you lack permissions to access it.</span><br><span class="line">npm error</span><br><span class="line">npm error If you believe this might be a permissions issue, please double-check the</span><br><span class="line">npm error permissions of the file and its containing directories, or try running</span><br><span class="line">npm error the command again as root/Administrator.</span><br><span class="line">npm error A complete log of this run can be found in: C:\Users\李恪瑶\AppData\Local\npm-cache\_logs\2025-06-23T12_49_51_019Z-debug-0.log</span><br></pre></td></tr></table></figure>
+
+<p>解决办法</p>
+<p>有可能是在尝试创建目录时遇到了<strong>权限问题</strong>，以管理员身份运行命令提示符，右键点击图标，选择 “<strong>以管理员身份运行</strong>“</p>
+<p><img src="C:\Users\李恪瑶\AppData\Roaming\Typora\typora-user-images\image-20250623212549192.png" alt="image-20250623212549192"></p>
+<p>在终端输入以下命令行，进行版本查看，若能查看，说明已经安装好了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
+
+<img src="C:\Users\李恪瑶\AppData\Roaming\Typora\typora-user-images\image-20250623212728070.png" alt="image-20250623212728070" style="zoom:25%;" />
+
+<p>在文件资源管理器中创建一个空的文件夹，用于创建个人博客，然后进入该文件夹终端</p>
+<p>输入以下命令行,初始化个人博客，”blog“为文件夹名，可以随便取</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+
+<p>然后进入blog文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
+
+<p>输入以下命令行，进行依赖配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\李恪瑶\AppData\Roaming\Typora\typora-user-images\image-20250623213254262.png" alt="image-20250623213254262"></p>
+<p>输入以下命令行，进行博客本地预览</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo serve</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\李恪瑶\AppData\Roaming\Typora\typora-user-images\image-20250623213410461.png" alt="image-20250623213410461"></p>
+<p>会生成一个网址，可以进行查看</p>
+<p><img src="C:\Users\李恪瑶\AppData\Roaming\Typora\typora-user-images\image-20250623213503784.png" alt="image-20250623213503784"></p>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Likeyao</div><div class="author-info-description">这是我的博客</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/23/hello-world/" title="Hello World">Hello World</a><time datetime="2025-06-23T12:55:34.457Z" title="发表于 2025-06-23 20:55:34">2025-06-23</time></div></div></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-06-23T15:11:33.870Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Likeyao</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
